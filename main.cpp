@@ -7,7 +7,7 @@
 #include <string>
 #include <utility>
 #include <vector>
-
+#include "Radix.h"
 // Здесь добавляем заголовки сортировок.
 
 int main() {
@@ -22,6 +22,10 @@ int main() {
         {"std::sort", [](Array& arr) {
             std::sort(arr.begin(), arr.end());
         }},
+        {"Radix", [](Array& arr) {
+            arr = radixSort(std::move(arr));
+        }},
+
         // Здесь добавляем вызовы сортировок.
     };
 
