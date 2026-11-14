@@ -8,7 +8,8 @@
 #include <utility>
 #include <vector>
 #include "Radix.h"
-// Здесь добавляем заголовки сортировок.
+#include "CombSort_Sannikov.h"
+
 
 int main() {
     using Array = std::vector<double>;
@@ -25,7 +26,9 @@ int main() {
         {"Radix", [](Array& arr) {
             arr = radixSort(std::move(arr));
         }},
-
+        { "Comb", [](Array& arr) {
+            arr = CombSort(std::move(arr));
+        }},
         // Здесь добавляем вызовы сортировок.
     };
 
