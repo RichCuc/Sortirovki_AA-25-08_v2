@@ -4,3 +4,6 @@ size_10000.txt
 radix_average.txt
 radix_best.txt
 radix_worst.txt
+heap_best.txt
+heap_average.txt
+heap_worst.txt

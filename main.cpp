@@ -9,6 +9,7 @@
 #include <vector>
 #include "Radix.h"
 #include "CombSort_Sannikov.h"
+#include "heap_sort_Romanovskiy.hpp"
 
 
 int main() {
@@ -28,6 +29,9 @@ int main() {
         }},
         { "Comb", [](Array& arr) {
             arr = CombSort(std::move(arr));
+        }},
+        {"Heap", [](Array& arr) {
+            heap_sort(arr.data(), static_cast<int>(arr.size()));
         }},
         // Здесь добавляем вызовы сортировок.
     };
