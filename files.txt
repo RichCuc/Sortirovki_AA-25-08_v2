@@ -10,4 +10,6 @@ heap_worst.txt
 comb_average.txt
 comb_best.txt
 comb_worst.txt
-
+gnome_best.txt
+gnome_average.txt
+gnome_worst.txt

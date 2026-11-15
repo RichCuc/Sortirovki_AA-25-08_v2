@@ -7,6 +7,7 @@
 #include <string>
 #include <utility>
 #include <vector>
+#include "GnomeSort_Zykov.h"
 #include "Radix.h"
 #include "CombSort_Sannikov.h"
 #include "heap_sort_Romanovskiy.hpp"
@@ -32,6 +33,9 @@ int main() {
         }},
         {"Heap", [](Array& arr) {
             heap_sort(arr.data(), static_cast<int>(arr.size()));
+        }},
+        {"Gnome", [](Array& arr) {
+            arr = gnomeSort(std::move(arr));
         }},
         // Здесь добавляем вызовы сортировок.
     };
