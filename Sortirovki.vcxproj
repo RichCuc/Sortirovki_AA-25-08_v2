@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64"><Configuration>Release</Configuration><Platform>x64</Platform></ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64"><Configuration>Debug</Configuration><Platform>x64</Platform></ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{43C18C15-B6A9-4CE6-9934-02A4567B387A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Sortirovki</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <VCToolsVersion>14.44.35207</VCToolsVersion>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)'=='Debug'">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)'=='Release'">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup>
+    <OutDir>$(ProjectDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)obj\$(Configuration)\</IntDir>
+    <LocalDebuggerWorkingDirectory>$(ProjectDir)</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalOptions>/source-charset:utf-8 /execution-charset:.866 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link><SubSystem>Console</SubSystem><GenerateDebugInformation>true</GenerateDebugInformation></Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)'=='Release'">
+    <ClCompile><Optimization>MaxSpeed</Optimization><PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions></ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">
+    <ClCompile><Optimization>Disabled</Optimization><PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions></ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="CombSort_Sannikov.cpp" />
+    <ClCompile Include="GnomeSort_Zykov.cpp" />
+    <ClCompile Include="heap_sort_Romanovskiy.cpp" />
+    <ClCompile Include="radixSort.cpp" />
+    <ClCompile Include="ShakerSort_Anisimov.cpp" />
+    <ClInclude Include="CombSort_Sannikov.h" />
+    <ClInclude Include="GnomeSort_Zykov.h" />
+    <ClInclude Include="heap_sort_Romanovskiy.hpp" />
+    <ClInclude Include="Radix.h" />
+    <ClInclude Include="ShakerSort_Anisimov.h" />
+    <None Include="files.txt" />
+    <None Include="size_100.txt" />
+    <None Include="size_1000.txt" />
+    <None Include="size_10000.txt" />
+    <None Include="comb_best.txt" />
+    <None Include="comb_average.txt" />
+    <None Include="comb_worst.txt" />
+    <None Include="gnome_best.txt" />
+    <None Include="gnome_average.txt" />
+    <None Include="gnome_worst.txt" />
+    <None Include="heap_best.txt" />
+    <None Include="heap_average.txt" />
+    <None Include="heap_worst.txt" />
+    <None Include="radix_best.txt" />
+    <None Include="radix_average.txt" />
+    <None Include="radix_worst.txt" />
+    <None Include="shaker_best.txt" />
+    <None Include="shaker_average.txt" />
+    <None Include="shaker_worst.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>
