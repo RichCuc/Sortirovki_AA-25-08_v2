@@ -13,3 +13,6 @@ comb_worst.txt
 gnome_best.txt
 gnome_average.txt
 gnome_worst.txt
+shaker_best.txt
+shaker_average.txt
+shaker_worst.txt

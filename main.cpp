@@ -11,6 +11,7 @@
 #include "Radix.h"
 #include "CombSort_Sannikov.h"
 #include "heap_sort_Romanovskiy.hpp"
+#include "ShakerSort_Anisimov.h"
 
 
 int main() {
@@ -36,6 +37,9 @@ int main() {
         }},
         {"Gnome", [](Array& arr) {
             arr = gnomeSort(std::move(arr));
+        }},
+        {"Shaker", [](Array& arr) {
+            arr = shakerSort(std::move(arr));
         }},
         // Здесь добавляем вызовы сортировок.
     };
