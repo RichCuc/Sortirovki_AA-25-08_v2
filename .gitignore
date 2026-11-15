@@ -1,0 +1,10 @@
+/sorts
+/sorts.exe
+*.obj
+*.pdb
+*.ilk
+*.idb
+.vs/
+/Debug/
+/Release/
+/x64/
